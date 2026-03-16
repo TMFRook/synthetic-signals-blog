@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Synthetic Signals - Deep dives into AI, systems engineering, and emerging technology. Technical analysis for the modern engineering mind.">
+    <meta name="keywords" content="AI, Machine Learning, Systems Engineering, Distributed Systems, Technology Blog">
+    <meta name="author" content="Synthetic Signals">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Synthetic Signals - AI & Systems Engineering Blog">
+    <meta property="og:description" content="Deep technical insights on AI, distributed systems, and emerging tech.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tmfrook.github.io/synthetic-signals-blog/">
+    <meta property="og:image" content="https://picsum.photos/1200/630">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Synthetic Signals">
+    <meta name="twitter:description" content="Deep technical insights on AI, distributed systems, and emerging tech.">
+    <meta name="twitter:image" content="https://picsum.photos/1200/630">
+
+    <title>Synthetic Signals - AI & Systems Engineering Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">&#9889;</span>
+                    <span class="brand-text">Synthetic Signals</span>
+                </a>
+            </div>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="nav-link">Articles <span class="dropdown-arrow">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="#">AI Alignment 2026</a>
+                        <a href="#">Distributed Systems Pitfalls</a>
+                        <a href="#">LLM Security Landscape</a>
+                        <a href="#">Rust + WASM at the Edge</a>
+                        <a href="#">Observability Beyond Logs</a>
+                        <a href="#">Quantum ML Intersection</a>
+                    </div>
+                </div>
+                <a href="#about" class="nav-link">About</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">&#9728;&#65039;</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-accent">Synthetic</span> Signals
+                </h1>
+                <p class="hero-subtitle">
+                    Deep technical insights on AI, distributed systems, and the bleeding edge of technology.
+                    Written by engineers, for engineers.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="47">0</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="12500">0</span>
+                        <span class="stat-label">Readers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="6">0</span>
+                        <span class="stat-label">Contributors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">&darr;</div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="articleSearch" placeholder="Search articles by title, topic, or keyword..." aria-label="Search articles">
+                <button class="search-btn" aria-label="Search">&#128269;</button>
+            </div>
+            <div class="filter-tags">
+                <button class="filter-tag active" data-filter="all">All</button>
+                <button class="filter-tag" data-filter="ai">AI</button>
+                <button class="filter-tag" data-filter="systems">Systems</button>
+                <button class="filter-tag" data-filter="security">Security</button>
+                <button class="filter-tag" data-filter="performance">Performance</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles Grid -->
+    <section class="articles-section" id="articles">
+        <div class="container">
+            <h2 class="section-title">Featured Articles</h2>
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Article Card 1 -->
+                <article class="article-card" data-categories="ai security">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/ai-align/600/400" alt="AI Alignment illustration" loading="lazy">
+                        <span class="card-badge">AI</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 15, 2026</span>
+                            <span class="card-reading-time">8 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">The State of AI Alignment in 2026</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            Where we stand in the race to align artificial intelligence with human values.
+                            A comprehensive look at the latest research, challenges, and breakthroughs.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Dr. Sarah Chen" class="author-avatar">
+                                <span class="author-name">Dr. Sarah Chen</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="article-card" data-categories="systems">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/distributed/600/400" alt="Distributed systems diagram" loading="lazy">
+                        <span class="card-badge">Systems</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 12, 2026</span>
+                            <span class="card-reading-time">12 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">7 Distributed Systems Pitfalls Nobody Warns You About</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            Hard-earned lessons from building and scaling distributed systems in production.
+                            The edge cases that only reveal themselves at scale.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Marcus Rodriguez" class="author-avatar">
+                                <span class="author-name">Marcus Rodriguez</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="article-card" data-categories="ai security">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/security/600/400" alt="LLM Security concept" loading="lazy">
+                        <span class="card-badge">Security</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 10, 2026</span>
+                            <span class="card-reading-time">10 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">The Evolving LLM Security Landscape</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            From prompt injection to model extraction, a comprehensive analysis of the threat
+                            vectors facing large language models and how to defend against them.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=33" alt="Dr. Sarah Chen" class="author-avatar">
+                                <span class="author-name">Dr. Sarah Chen</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="article-card" data-categories="systems performance">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/rust-wasm/600/400" alt="Rust and WebAssembly" loading="lazy">
+                        <span class="card-badge">Performance</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 8, 2026</span>
+                            <span class="card-reading-time">15 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">Rust + WebAssembly at the Edge: A Production Story</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            How we achieved sub-millisecond latency serving millions of requests by compiling
+                            Rust to WebAssembly and deploying to edge locations worldwide.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Marcus Rodriguez" class="author-avatar">
+                                <span class="author-name">Marcus Rodriguez</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="article-card" data-categories="systems">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/observability/600/400" alt="Observability dashboard" loading="lazy">
+                        <span class="card-badge">Systems</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 5, 2026</span>
+                            <span class="card-reading-time">11 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">Observability Beyond Logs: What We Learned Migrating to OpenTelemetry</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            The journey from traditional logging to unified observability with traces, metrics,
+                            and structured events. Practical lessons from a real-world migration.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Alex Kim" class="author-avatar">
+                                <span class="author-name">Alex Kim</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="article-card" data-categories="ai">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/quantum/600/400" alt="Quantum computing" loading="lazy">
+                        <span class="card-badge">AI</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-date">March 1, 2026</span>
+                            <span class="card-reading-time">9 min read</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">Where Quantum Computing Meets Machine Learning</a>
+                        </h3>
+                        <p class="card-excerpt">
+                            Exploring the convergence of quantum computing and machine learning.
+                            What's hype, what's real, and what's coming in the next five years.
+                        </p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Alex Kim" class="author-avatar">
+                                <span class="author-name">Alex Kim</span>
+                            </div>
+                            <a href="#" class="read-more">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay in the Signal</h2>
+                    <p class="newsletter-description">
+                        Get our weekly digest of the latest in AI, systems engineering, and emerging tech.
+                        Deep dives, case studies, and insights delivered to your inbox.
+                    </p>
+                    <div class="newsletter-features">
+                        <div class="feature-item">&#10003; Weekly technical deep-dives</div>
+                        <div class="feature-item">&#10003; Early access to new articles</div>
+                        <div class="feature-item">&#10003; Exclusive engineering insights</div>
+                    </div>
+                </div>
+                <div class="newsletter-form-container">
+                    <form class="newsletter-form" id="newsletterForm">
+                        <h3>Subscribe Now</h3>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="newsletterEmail"
+                                placeholder="your.email@example.com"
+                                required
+                                aria-label="Email address"
+                            >
+                            <label for="newsletterEmail" class="sr-only">Email address</label>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <span class="btn-text">Subscribe</span>
+                            <span class="btn-loader"></span>
+                        </button>
+                        <p class="form-note">No spam. Unsubscribe anytime.</p>
+                        <div class="form-feedback" id="formFeedback"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">About Synthetic Signals</h2>
+                    <p>
+                        We're a collective of engineers, researchers, and practitioners exploring the
+                        frontier of technology. Our mission is to provide deep, technical analysis of
+                        the systems and algorithms shaping our future.
+                    </p>
+                    <p>
+                        From AI alignment to distributed systems architecture, we cover the topics that
+                        matter to engineers building the next generation of technology.
+                    </p>
+                    <a href="#about" class="btn-secondary">Meet the Team &rarr;</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/team/800/600" alt="Team collaboration" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">
+                        <span class="brand-icon">&#9889;</span> Synthetic Signals
+                    </h3>
+                    <p class="footer-description">
+                        Deep technical insights on AI, distributed systems, and emerging technology.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">&#120143;</a>
+                        <a href="#" aria-label="GitHub">GH</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="RSS">RSS</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Content</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#articles">Latest Articles</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Topics</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">Distributed Systems</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Performance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Synthetic Signals. All rights reserved.</p>
+                <p>Built with care by engineers who care about the details.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        &uarr;
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
